@@ -7,7 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from EsproMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from EsproMusic.core.call import Loy
+from EsproMusic.core.call import Ritik
 from EsproMusic.utils import seconds_to_min, time_to_seconds
 from EsproMusic.utils.channelplay import get_channeplayCB
 from EsproMusic.utils.decorators.language import languageCB
@@ -288,7 +288,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Loy.stream_call(url)
+                await Ritik.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -501,8 +501,8 @@ async def play_Music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("LoymousAdmin") & ~BANNED_USERS)
-async def Loymous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("RitikmousAdmin") & ~BANNED_USERS)
+async def Ritikmous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -512,7 +512,7 @@ async def Loymous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("LoyPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("RitikPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()

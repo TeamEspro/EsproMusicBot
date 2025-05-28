@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from EsproMusic import LOGGER, app, userbot
-from EsproMusic.core.call import Loy
+from EsproMusic.core.call import Ritik
 from EsproMusic.misc import sudo
 from EsproMusic.plugins import ALL_MODULES
 from EsproMusic.utils.database import get_banned_users, get_gbanned
@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("EsproMusic.plugins" + all_module)
     LOGGER("EsproMusic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await Loy.start()
+    await Ritik.start()
     try:
-        await Loy.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await Ritik.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("EsproMusic").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -48,7 +48,7 @@ async def init():
         exit()
     except:
         pass
-    await Loy.decorators()
+    await Ritik.decorators()
     LOGGER("EsproMusic").info("EsproMusicBot Started Successfully \n\n Yaha App ko nahi aana hai aapni hf jo bhej sakte hai @Esprosupport ")
     await idle()
     await app.stop()

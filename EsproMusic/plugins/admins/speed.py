@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from EsproMusic import app
-from EsproMusic.core.call import Loy
+from EsproMusic.core.call import Ritik
 from EsproMusic.misc import SUDOERS, db
 from EsproMusic.utils import AdminRightsCheck
 from EsproMusic.utils.database import is_active_chat, is_nonadmin_chat
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await Loy.speedup_stream(
+        await Ritik.speedup_stream(
             chat_id,
             file_path,
             speed,

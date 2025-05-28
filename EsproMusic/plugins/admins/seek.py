@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from EsproMusic import YouTube, app
-from EsproMusic.core.call import Loy
+from EsproMusic.core.call import Ritik
 from EsproMusic.misc import db
 from EsproMusic.utils import AdminRightsCheck, seconds_to_min
 from EsproMusic.utils.inline import close_markup
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Loy.seek_stream(
+        await Ritik.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),

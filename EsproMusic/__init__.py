@@ -1,4 +1,4 @@
-from EsproMusic.core.bot import Loy
+from EsproMusic.core.bot import Ritik
 from EsproMusic.core.dir import dirr
 from EsproMusic.core.git import git
 from EsproMusic.core.userbot import Userbot
@@ -11,7 +11,7 @@ git()
 dbb()
 heroku()
 
-app = Loy()
+app = Ritik()
 userbot = Userbot()
 
 
