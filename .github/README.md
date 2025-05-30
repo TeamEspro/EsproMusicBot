@@ -2,10 +2,6 @@
     𝐄𝗌ρ𝗋ⱺ 𝐌ᥙsiᥴ [ ɴᴏ ᴀᴅʂ ] 🕊
 </h2>
 
-<p align="center">
-  <img src="https://files.catbox.moe/5ta47k.jpg">
-</p>
-
 <h3 align="center">
 <details>
 <summary><b>OPEN</b></summary>
