@@ -7,22 +7,22 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("24168862"))
+API_HASH = getenv("916a9424dd1e58ab7955001ccc0172b3")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("8205254480:AAGP7c8yA6FTTDXb_clsfLccUvuLhTv3ezY")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("mongodb+srv://HYPER-KA-BETA-KENZO:Fc1cWDUgyUlHQ9bU@cluster0.acqtsqp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
+LOGGER_ID = int(getenv("-1003113519467", None))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", None))
+OWNER_ID = int(getenv("8352458312", None))
 
 ## Fill these variables if you're depRitiking on heroku.
 # Your heroku app name
@@ -39,8 +39,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/EsproUpdate")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/EsproSupport")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MY_BOTS_XO")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/animeXchat_XO")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -62,15 +62,15 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
-STRING3 = getenv("STRING_SESSION3", None)
-STRING4 = getenv("STRING_SESSION4", None)
-STRING5 = getenv("STRING_SESSION5", None)
+STRING1 = getenv("BQFwyZ4AHo90j080e2D2AbS01AI7cYkOXu4GsYJfIff8opWR5I18MafZdx_ceT3hpnmVp1QA6YX5FqhoyFD_QxXAK7fKDQH38FGJKnRXvdA97005vz9NcuYry2RdgF1gb1e9z3gjkzvwzszAvCVoh3L1L5TK2gp_239ZtTtr7yUpkL_p6xxiZHIakHSswaazh12tF0WpTbW7Rpp-P0qDL3ewqPbe4bazBvI7PfsCA2cWOe6571eNITceFzbwvpl5gHPYz0MN95I_FfCSJSOd3C1q7gpf8-b9jep-E6K4tWsLwimKDxLnlZiXI7jvytveCuWxMpZ3Bb9QubUIKGO0MOS9bfHywgAAAAH3-icmAA", None)
+STRING2 = getenv("BQFwyZ4AHo90j080e2D2AbS01AI7cYkOXu4GsYJfIff8opWR5I18MafZdx_ceT3hpnmVp1QA6YX5FqhoyFD_QxXAK7fKDQH38FGJKnRXvdA97005vz9NcuYry2RdgF1gb1e9z3gjkzvwzszAvCVoh3L1L5TK2gp_239ZtTtr7yUpkL_p6xxiZHIakHSswaazh12tF0WpTbW7Rpp-P0qDL3ewqPbe4bazBvI7PfsCA2cWOe6571eNITceFzbwvpl5gHPYz0MN95I_FfCSJSOd3C1q7gpf8-b9jep-E6K4tWsLwimKDxLnlZiXI7jvytveCuWxMpZ3Bb9QubUIKGO0MOS9bfHywgAAAAH3-icmAA", None)
+STRING3 = getenv("BQFwyZ4AHo90j080e2D2AbS01AI7cYkOXu4GsYJfIff8opWR5I18MafZdx_ceT3hpnmVp1QA6YX5FqhoyFD_QxXAK7fKDQH38FGJKnRXvdA97005vz9NcuYry2RdgF1gb1e9z3gjkzvwzszAvCVoh3L1L5TK2gp_239ZtTtr7yUpkL_p6xxiZHIakHSswaazh12tF0WpTbW7Rpp-P0qDL3ewqPbe4bazBvI7PfsCA2cWOe6571eNITceFzbwvpl5gHPYz0MN95I_FfCSJSOd3C1q7gpf8-b9jep-E6K4tWsLwimKDxLnlZiXI7jvytveCuWxMpZ3Bb9QubUIKGO0MOS9bfHywgAAAAH3-icmAA", None)
+STRING4 = getenv("BQFwyZ4AHo90j080e2D2AbS01AI7cYkOXu4GsYJfIff8opWR5I18MafZdx_ceT3hpnmVp1QA6YX5FqhoyFD_QxXAK7fKDQH38FGJKnRXvdA97005vz9NcuYry2RdgF1gb1e9z3gjkzvwzszAvCVoh3L1L5TK2gp_239ZtTtr7yUpkL_p6xxiZHIakHSswaazh12tF0WpTbW7Rpp-P0qDL3ewqPbe4bazBvI7PfsCA2cWOe6571eNITceFzbwvpl5gHPYz0MN95I_FfCSJSOd3C1q7gpf8-b9jep-E6K4tWsLwimKDxLnlZiXI7jvytveCuWxMpZ3Bb9QubUIKGO0MOS9bfHywgAAAAH3-icmAA", None)
+STRING5 = getenv("BQFwyZ4AHo90j080e2D2AbS01AI7cYkOXu4GsYJfIff8opWR5I18MafZdx_ceT3hpnmVp1QA6YX5FqhoyFD_QxXAK7fKDQH38FGJKnRXvdA97005vz9NcuYry2RdgF1gb1e9z3gjkzvwzszAvCVoh3L1L5TK2gp_239ZtTtr7yUpkL_p6xxiZHIakHSswaazh12tF0WpTbW7Rpp-P0qDL3ewqPbe4bazBvI7PfsCA2cWOe6571eNITceFzbwvpl5gHPYz0MN95I_FfCSJSOd3C1q7gpf8-b9jep-E6K4tWsLwimKDxLnlZiXI7jvytveCuWxMpZ3Bb9QubUIKGO0MOS9bfHywgAAAAH3-icmAA", None)
 
 
 BANNED_USERS = filters.user()
-adminlist = {}
+adminlist = {8371375746}
 lyrical = {}
 votemode = {}
 autoclean = []
@@ -78,7 +78,7 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/25efe6aa029c6baea73ea.jpg"
+    "START_IMG_URL", "https://graph.org/file/e62beb29578ad04f3123c-f69f18c682fb75cc75.jpg"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg"
