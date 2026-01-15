@@ -1,0 +1,86 @@
+Traceback (most recent call last):
+  File "/app/ANNIEMUSIC/utils/errors.py", line 133, in wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/ANNIEMUSIC/core/call.py", line 432, in play
+    img = await get_thumb(videoid)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/ANNIEMUSIC/utils/thumbnails.py", line 82, in get_thumb
+    base = Image.open(thumb_path).resize((1280, 720)).convert("RGBA")
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/PIL/Image.py", line 3505, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'cache/thumbU2QNhsAgIIE.png'
+Traceback (most recent call last):
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/ffmpeg.py", line 56, in check_stream
+    result = loads(stdout.decode('utf-8')) or {}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/json/init.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/ANNIEMUSIC/utils/errors.py", line 133, in wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/ANNIEMUSIC/core/call.py", line 218, in stream_call
+    await assistant.play(config.LOGGER_ID, MediaStream(link))
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/statictypes.py", line 96, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/mtproto_required.py", line 23, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/mutex.py", line 12, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/methods/stream/play.py", line 41, in play
+    media_description = await StreamParams.get_stream_params(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/methods/utilities/stream_params.py", line 27, in get_stream_params
+    await stream.check_stream()
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/types/stream/media_stream.py", line 217, in check_stream
+    await check_stream(
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/ffmpeg.py", line 62, in check_stream
+    ffprobe.terminate()
+  File "/app/.heroku/python/lib/python3.12/asyncio/subprocess.py", line 143, in terminate
+    self._transport.terminate()
+  File "/app/.heroku/python/lib/python3.12/asyncio/base_subprocess.py", line 149, in terminate
+    self._check_proc()
+  File "/app/.heroku/python/lib/python3.12/asyncio/base_subprocess.py", line 142, in _check_proc
+    raise ProcessLookupError()
+ProcessLookupError
+Traceback (most recent call last):
+  File "/app/ANNIEMUSIC/utils/errors.py", line 133, in wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/ANNIEMUSIC/core/call.py", line 153, in skip_stream
+    await assistant.play(chat_id, stream)
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/statictypes.py", line 96, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/mtproto_required.py", line 23, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/mutex.py", line 12, in async_wrapper
+    return await func(*args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/methods/stream/play.py", line 41, in play
+    media_description = await StreamParams.get_stream_params(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/methods/utilities/stream_params.py", line 27, in get_stream_params
+    await stream.check_stream()
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/types/stream/media_stream.py", line 273, in check_stream
+    await check_stream(
+  File "/app/.heroku/python/lib/python3.12/site-packages/pytgcalls/ffmpeg.py", line 60, in check_stream
+    raise FileNotFoundError()
+FileNotFoundError
